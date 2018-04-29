@@ -3,7 +3,7 @@ apply plugin: 'com.android.library' //library //application
 android {
     compileSdkVersion 19
     defaultConfig {
-        //applicationId "com.google.zxing.client.android"
+        //applicationId "com.humei.client.android"
         minSdkVersion 19
     }
     buildTypes {
