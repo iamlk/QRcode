@@ -360,12 +360,9 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     Intent intent = new Intent(Intent.ACTION_VIEW);
     intent.addFlags(Intents.FLAG_NEW_DOC);
     switch (item.getItemId()) {
-      case R.id.menu_settings:
+      default:
         intent.setClassName(this, PreferencesActivity.class.getName());
         startActivity(intent);
-        break;
-      default:
-        return super.onOptionsItemSelected(item);
     }
     return true;
   }
@@ -727,7 +724,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 
   private void displayFrameworkBugMessageAndExit() {
     AlertDialog.Builder builder = new AlertDialog.Builder(this);
-    builder.setTitle(getString(R.string.app_name));
+    builder.setTitle(getString(R.string.qrcode));
     builder.setMessage(getString(R.string.msg_camera_framework_bug));
     builder.setPositiveButton(R.string.button_ok, new FinishListener(this));
     builder.setOnCancelListener(new FinishListener(this));
